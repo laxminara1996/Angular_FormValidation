@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myapp';
+  fname:string="";
+  pwd:string="";
+  data:string='';
+  valid(input:any):void{
+    if(input.valid){
+      this.data=input.value;
+    this.data = (JSON.stringify(this.data));
+    }else{
+      alert('some errors')
+    }
+   
+  }
 }
